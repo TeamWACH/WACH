@@ -1,0 +1,426 @@
+<!doctype html>
+<html class="zc-html">
+  <head>
+    <meta charset="utf-8">
+    <title>ZingSoft Demo</title>
+    <style>
+    .zc-body { background:#fff; }
+
+.chart--container {
+  height: 100%;
+  width: 100%;
+  min-height: 530px;
+}
+
+.zc-ref {
+  display: none;
+}
+    </style>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  </head>
+  ​
+  <body class="zc-body">
+  ​
+    <div id="myChart" class="chart--container">
+      <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+    </div>
+    <script>
+    let chartData = {
+  graphset: [
+    {
+      type: 'line',
+      backgroundColor: '#00BAF0 #0C9BBC',
+      width: '100%',
+      x: '0px',
+      y: '0px',
+      globals: {
+        fontFamily: 'Arial',
+      },
+      title: {
+        text: '2022 WACH Donations',
+        paddingLeft: '25px',
+        backgroundColor: 'none',
+        fontColor: '#ffffff',
+        fontFamily: 'Arial',
+        fontSize: '22px',
+        fontWeight: 'normal',
+        height: '70px',
+        textAlign: 'left'
+      },
+      subtitle: {
+        text: 'Donations shown by month',
+        paddingTop: '20px',
+        paddingLeft: '25px',
+        alpha: 0.7,
+        fontColor: '#ffffff',
+        fontFamily: 'Arial',
+        fontSize: '13px',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+        height: '40px',
+        textAlign: 'left'
+      },
+      plot: {
+        tooltip: {
+          text: '%k: %v',
+          padding: '5px 10px',
+          backgroundColor: '#016B8B',
+          borderRadius: '6px',
+          shadow: false,
+          thousandsSeparator: ','
+        },
+        alphaArea: 1,
+        hoverMarker: {
+          type: 'circle',
+          backgroundColor: '#016B8B',
+          borderWidth: '1px',
+          size: '6px'
+        },
+        hoverState: {
+          visible: false
+        },
+        lineColor: '#ffffff',
+        lineWidth: '2px',
+        marker: {
+          type: 'circle',
+          backgroundColor: '#0C9BBC',
+          borderColor: '#ffffff',
+          borderWidth: '1px',
+          shadow: false,
+          size: '5px'
+        },
+        shadow: false,
+        stacked: true
+      },
+      plotarea: {
+        marginTop: '75px',
+        marginRight: '30px',
+        marginBottom: '65px',
+        marginLeft: '30px',
+        backgroundColor: 'none'
+      },
+      scaleX: {
+        values: ['April Cycle', 'May Cycle', 'June Cycle', 'July Cycle','August Cycle', 'September Cycle', 'October Cycle', 'November Cycle', 'December Cycle'],
+        guide: {
+          visible: false
+        },
+        visible: false
+      },
+      scaleY: {
+        guide: {
+          visible: false
+        },
+        visible: false
+      },
+      series: [
+        {
+          values: [3202, 3202, 0, 0, 0, 0, 0, 0,0]
+        }
+      ]
+    },
+    {
+      type: 'pie',
+      backgroundColor: '#F4F4F4 #EAEAEA',
+      width: '50%',
+      height: '50%',
+      x: '0px',
+      y: '50%',
+      globals: {
+        fontFamily: 'Arial',
+      },
+      title: {
+        text: 'Top Cycle',
+        paddingLeft: '5px',
+        backgroundColor: 'none',
+        fontColor: '#505050',
+        fontFamily: 'Arial',
+        fontSize: '18px',
+        fontWeight: 'normal',
+        height: '70px',
+        textAlign: 'left'
+      },
+      subtitle: {
+        text: 'April Cycle',
+        paddingTop: '20px',
+        paddingLeft: '10px',
+        alpha: 0.7,
+        fontColor: '#505050',
+        fontFamily: 'Arial',
+        fontSize: '13px',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+        height: '40px',
+        textAlign: 'left'
+      },
+      plot: {
+        tooltip: {
+          visible: false
+        },
+        valueBox: {
+          alpha: 1,
+          connected: false,
+          lineWidth: '10px'
+        },
+        slice: 35
+      },
+      plotarea: {
+        marginTop: '55px',
+        marginRight: '5%',
+        marginBottom: '0px',
+        marginLeft: '10%',
+        backgroundColor: 'none'
+      },
+      scaleR: {
+        refAngle: 40
+      },
+      labels: [
+        {
+          text: '6,402',
+          anchor: 'c',
+          fontColor: '#505050',
+          fontFamily: 'arial',
+          fontSize: '20px',
+          x: '52.5%',
+          y: '60%'
+        }
+      ],
+      series: [
+        {
+          text: 'April Cycle',
+          values: [50],
+          valueBox: {
+            fontColor: '#ffffff',
+            fontSize: '15px',
+            fontStyle: 'italic',
+            offsetX: '10px',
+            offsetY: '0px'
+          },
+          backgroundColor: '#ff9525 #fc6222',
+          borderColor: '#F4F4F4',
+          shadow: false
+        },
+        {
+          text: 'May Cycle',
+          values: [20],
+          valueBox: {
+            fontColor: '#ffffff',
+            fontSize: '15px',
+            fontStyle: 'italic',
+            offsetX: '10px',
+            offsetY: '0px'
+          },
+          backgroundColor: '#9dc644 #608215',
+          borderColor: '#F4F4F4',
+          shadow: false
+        },
+        {
+          text: 'June Cycle',
+          values: [30],
+          valueBox: {
+            fontColor: '#ffffff',
+            fontSize: '15px',
+            fontStyle: 'italic',
+            offsetX: '2px',
+            offsetY: '0px'
+          },
+          backgroundColor: '#0C9BBC #0C9BBC',
+          borderColor: '#F4F4F4',
+          shadow: false
+        },
+      ]
+    },
+    {
+      type: 'line',
+      backgroundColor: '#F4F4F4 #EAEAEA',
+      width: '50%',
+      height: '50%',
+      x: '50%',
+      y: '50%',
+      globals: {
+        fontFamily: 'Arial',
+      },
+      title: {
+        text: '2022 Donations made',
+        paddingLeft: '25px',
+        backgroundColor: 'none',
+        fontColor: '#505050',
+        fontFamily: 'Arial',
+        fontSize: '18px',
+        fontWeight: 'normal',
+        height: '70px',
+        textAlign: 'left'
+      },
+      subtitle: {
+        text: 'Donation by month',
+        paddingTop: '20px',
+        paddingLeft: '25px',
+        alpha: 0.7,
+        fontColor: '#505050',
+        fontFamily: 'Arial',
+        fontSize: '13px',
+        fontStyle: 'italic',
+        fontWeight: 'normal',
+        height: '40px',
+        textAlign: 'left'
+      },
+      legend: {
+        margin: '80% 10% auto auto',
+        backgroundColor: 'none',
+        borderWidth: '0px',
+        item: {
+          alpha: 0.7,
+          fontColor: '#505050'
+        },
+        layout: 'float',
+        shadow: false,
+        textAlign: 'left'
+      },
+      plot: {
+        alphaArea: 1,
+        hoverState: {
+          visible: false
+        },
+        shadow: false,
+        thousandsSeparator: ',',
+        tooltipText: '%t views: %v'
+      },
+      plotarea: {
+        marginTop: '70px',
+        marginRight: '20px',
+        marginBottom: '50px',
+        marginLeft: '30px',
+        backgroundColor: 'none'
+      },
+      scaleX: {
+        values: ['Donation 1','Donation 2','Donation 3','Donation 4','Donation 5','Donation 6','Donation 7','Donation 8','Donation 9','Donation 10','Donation 11','Donation 12','Donation 13','Donation 14','Donation 15','Donation 16','Donation 17','Donation 18','Donation 19'],
+        guide: {
+          visible: false
+        },
+        visible: false
+      },
+      scaleY: {
+        guide: {
+          visible: false
+        },
+        visible: false
+      },
+      series: [
+        {
+          text: 'April',
+          values: [150, 150, 150, 150, 150, 250,150, 150, 150, 150, 500, 100, 100, 251, 100,151,200,100,100],
+          tooltip: {
+            text: '%k: %v',
+            padding: '5px 10px',
+            backgroundColor: '#E25833',
+            borderRadius: '6px',
+            shadow: false
+          },
+          hoverMarker: {
+            type: 'circle',
+            backgroundColor: '#E25833',
+            borderWidth: '1px',
+            size: '6px'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#F4F4F4',
+            borderColor: '#E25833',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
+          },
+          lineColor: '#E25833',
+          lineWidth: '2px',
+          marker: {
+            type: 'circle',
+            backgroundColor: '#F4F4F4',
+            borderColor: '#E25833',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
+          }
+        },
+        {
+          text: 'May',
+          values: [200, 150, 200, 150, 200, 150, 300, 400, 100, 150, 300, 400,500],
+          tooltip: {
+            text: '%k: %v',
+            padding: '5px 10px',
+            backgroundColor: '#5D7F13',
+            borderRadius: '6px',
+            shadow: false
+          },
+          hoverMarker: {
+            type: 'circle',
+            backgroundColor: '#5D7F13',
+            borderWidth: '1px',
+            size: '6px'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#F4F4F4',
+            borderColor: '#5D7F13',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
+          },
+          lineColor: '#5D7F13',
+          lineWidth: '2px',
+          marker: {
+            type: 'circle',
+            backgroundColor: '#F4F4F4',
+            borderColor: '#5D7F13',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
+          }
+        },
+        {
+          text: 'June',
+          values: [1008, 755, 725, 556, 677, 1140, 1144, 1183, 822, 1006, 793, 584],
+          tooltip: {
+            text: '%k: %v',
+            padding: '5px 10px',
+            backgroundColor: '#0C9BBC',
+            borderRadius: '6px',
+            shadow: false
+          },
+          hoverMarker: {
+            type: 'circle',
+            backgroundColor: '#E25833',
+            borderWidth: '1px',
+            size: '6px'
+          },
+          legendMarker: {
+            type: 'circle',
+            backgroundColor: '#F4F4F4',
+            borderColor: '#0C9BBC',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
+          },
+          lineColor: '#0C9BBC',
+          lineWidth: '2px',
+          marker: {
+            type: 'circle',
+            backgroundColor: '#F4F4F4',
+            borderColor: '#0C9BBC',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
+          }
+        }        
+      ]
+    }
+  ]
+};
+ 
+zingchart.render({
+  id: 'myChart',
+  data: chartData,
+  height: '100%',
+  width: '100%',
+});
+    </script>
+  </body>
+</html>
