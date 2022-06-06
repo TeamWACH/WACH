@@ -1,30 +1,123 @@
-<!doctype html>
-<html class="zc-html">
+<!DOCTYPE html>
+<html>
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+<head>
+<title>May Cycle Graph</title>
   <head>
-    <meta charset="utf-8">
-    <title>ZingSoft Demo</title>
-    <style>
+<link rel="icon" type="image/x-icon" href="https://bit.ly/3xYPwIG">
+</head>
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+.button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: #1aa3ff;
+        border-radius: 6px;
+        outline: none;
+      }
+      .fa {
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+</style></head>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-medium w3-right w3-padding-medium w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()">
+  <a href="https://weallcanhelp.blogspot.com/" class="w3-bar-item w3-button w3-padding-medium w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-medium w3-theme-d4">Past 3 Cycles</a>
+  </div>
+ </div>
+</div>  </div>
+ </div>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:60px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3" w3-include-html="https://TeamWACH.github.io/WACH/LeftCol.html"></div>
+    <!-- End Left Column -->
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7" style="margin-top:-15px">
+      <div class="w3-container w3-card w3-white w3-round w3-margin">
+  <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+   <style>
     .zc-body { background:#fff; }
 
 .chart--container {
   height: 100%;
   width: 100%;
-  min-height: 530px;
+  min-height: 680px;
 }
 
 .zc-ref {
   display: none;
 }
     </style>
-    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-  </head>
-  ​
-  <body class="zc-body">
-  ​
-    <div id="myChart" class="chart--container">
-      <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
-    </div>
-    <script>
+  <center><h4 style="font-family: 'Trebuchet MS';color:#6DAACE">Last 3 Cycles Graph</h4></center>
+<div id="myChart" class="chart--container">
+  </div>
+  <script>
     let chartData = {
   graphset: [
     {
@@ -129,7 +222,7 @@
         fontFamily: 'Arial',
       },
       title: {
-        text: 'Top Cycle',
+        text: 'Cycle wise chart',
         paddingLeft: '5px',
         backgroundColor: 'none',
         fontColor: '#505050',
@@ -140,7 +233,7 @@
         textAlign: 'left'
       },
       subtitle: {
-        text: 'April Cycle',
+        text: 'April Cycle,May Cycle',
         paddingTop: '20px',
         paddingLeft: '10px',
         alpha: 0.7,
@@ -175,13 +268,13 @@
       },
       labels: [
         {
-          text: '6,402',
+          text: 'Rs.6,402',
           anchor: 'c',
           fontColor: '#505050',
           fontFamily: 'arial',
-          fontSize: '20px',
+          fontSize: '15px',
           x: '52.5%',
-          y: '60%'
+          y: '58%'
         }
       ],
       series: [
@@ -201,21 +294,21 @@
         },
         {
           text: 'May Cycle',
-          values: [20],
+          values: [50],
           valueBox: {
             fontColor: '#ffffff',
             fontSize: '15px',
             fontStyle: 'italic',
-            offsetX: '10px',
+            offsetX: '0px',
             offsetY: '0px'
           },
           backgroundColor: '#9dc644 #608215',
           borderColor: '#F4F4F4',
           shadow: false
-        },
-        {
+        }
+        /*{
           text: 'June Cycle',
-          values: [30],
+          values: [0],
           valueBox: {
             fontColor: '#ffffff',
             fontSize: '15px',
@@ -226,7 +319,7 @@
           backgroundColor: '#0C9BBC #0C9BBC',
           borderColor: '#F4F4F4',
           shadow: false
-        },
+        },*/
       ]
     },
     {
@@ -264,7 +357,7 @@
         textAlign: 'left'
       },
       legend: {
-        margin: '80% 10% auto auto',
+        margin: '85% 10% auto auto',
         backgroundColor: 'none',
         borderWidth: '0px',
         item: {
@@ -285,9 +378,9 @@
         tooltipText: '%t views: %v'
       },
       plotarea: {
-        marginTop: '70px',
+        marginTop: '80px',
         marginRight: '20px',
-        marginBottom: '50px',
+        marginBottom: '70px',
         marginLeft: '30px',
         backgroundColor: 'none'
       },
@@ -306,12 +399,13 @@
       },
       series: [
         {
-          text: 'April',
+          text: 'April',  
           values: [150, 150, 150, 150, 150, 250,150, 150, 150, 150, 500, 100, 100, 251, 100,151,200,100,100],
           tooltip: {
             text: '%k: %v',
             padding: '5px 10px',
             backgroundColor: '#E25833',
+            
             borderRadius: '6px',
             shadow: false
           },
@@ -377,7 +471,7 @@
         },
         {
           text: 'June',
-          values: [1008, 755, 725, 556, 677, 1140, 1144, 1183, 822, 1006, 793, 584],
+          values: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
           tooltip: {
             text: '%k: %v',
             padding: '5px 10px',
@@ -387,7 +481,7 @@
           },
           hoverMarker: {
             type: 'circle',
-            backgroundColor: '#E25833',
+            backgroundColor: '#0C9BBC',
             borderWidth: '1px',
             size: '6px'
           },
@@ -422,5 +516,50 @@ zingchart.render({
   width: '100%',
 });
     </script>
-  </body>
+        </div>
+      
+      
+    <!-- End Middle Column -->
+    </div>
+    
+      <!-- Right Column -->
+
+<div class="w3-col m2" w3-include-html="https://TeamWACH.github.io/WACH/RightCol.html"></div> 
+ </div>
+    
+  <!-- End Grid -->
+  </div>
+<!-- Footer -->
+<br>
+  <footer class="w3-container w3-padding-25 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <img src="https://bit.ly/3wLEbtF" alt="logo" width="160" height="60"/>
+      <h4>Team WACH</h4>
+    </div>
+    <div class="w3-third">
+      <h3>Contact Us</h3>        
+          <p>Email: <a href="mailto:team.weallcanhelp@gmail.com">team.weallcanhelp@gmail.com</a></p>        
+    </div>
+    <!--Social Media--> 
+   <div class="w3-third">
+      <h3>Connect With Us</h3>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="https://bit.ly/3vt0Rhp" class="fa fa-instagram"></a>
+      <a href="https://bit.ly/3Oh8D6R" class="fa fa-twitter"></a>
+      <a href="mailto:team.weallcanhelp@gmail.com" class="fa fa-google"></a>
+    </div>
+<!--End of Social Media--> 
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-12">Copyright &copy; 2022 | All rights reserved.</div>
+
+<!-- End page content -->
+</div>
+<script>
+includeHTML();
+</script>
+
+</body>
 </html>
