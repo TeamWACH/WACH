@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Donations Page</title>
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet'>
+<link href='#' rel='stylesheet'>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<style>
+::-webkit-scrollbar {
+width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+                                 
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+} 
+</style>
+</head>
+<body className='snippet-body'>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<div class="container">
+<div class="row header" style="text-align:center;color:green">
+<h3>List of all Donations</h3>
+</div>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+     <thead>
+      <tr>
+	<th>Id</th> 
+        <th>Date</th>
+        <th>Name</th>
+        <th>Donation Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+	<td>301</td>
+        <td>10-06-2022</td>
+        <td>B Manideep</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>201</td>
+        <td>10-05-2022</td>
+        <td>Svs Rajareddy</td>
+        <td>200.00</td>
+      </tr>
+     <tr>
+	<td>202</td>
+        <td>10-05-2022</td>
+        <td>B Manideep</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>203</td>
+        <td>10-05-2022</td>
+        <td>K Anuswetha</td>
+        <td>200.00</td>
+      </tr>
+      <tr>
+	<td>204</td>
+        <td>10-05-2022</td>
+        <td>S Naveen Kumar</td>
+        <td>150.00</td>
+      </tr>
+	  <tr>
+	<td>205</td>
+        <td>10-05-2022</td>
+        <td>T Nookesh Sai</td>
+        <td>200.00</td>
+      </tr>
+	 <tr>
+	<td>206</td>
+        <td>11-05-2022</td>
+        <td>R Naveen</td>
+        <td>150.00</td>
+      </tr>
+       <tr>
+	<td>207</td>
+        <td>14-05-2022</td>
+        <td>K Bhargavi</td>
+        <td>300.00</td>
+      </tr>
+	<tr>
+	<td>208</td>
+        <td>14-05-2022</td>
+        <td>P V Subbareddy</td>
+        <td>400.00</td>
+      </tr>
+	 <tr>
+	<td>209</td>
+        <td>15-05-2022</td>
+        <td>N Bharathi</td>
+        <td>100.00</td>
+      </tr>
+	<tr>
+	<td>210</td>
+        <td>18-05-2022</td>
+        <td>D Nagulmeeravali</td>
+        <td>150.00</td>
+      </tr>
+	 <tr>
+	<td>211</td>
+        <td>31-05-2022</td>
+        <td>P Jhansi</td>
+        <td>300.00</td>
+      </tr>
+	 <tr>
+	<td>212</td>
+        <td>03-06-2022</td>
+        <td>P SrinivasulaReddy</td>
+        <td>400.00</td>
+      </tr>
+      <tr>
+	<td>213</td>
+        <td>06-06-2022</td>
+        <td>V Lakshmi Prasanna </td>
+        <td>500.00</td>
+      </tr>
+	<tr>
+	<td>214</td>
+        <td>06-06-2022</td>
+        <td>A Venkatesh</td>
+        <td>300.00</td>
+      </tr>
+	<tr>
+	<td>215</td>
+        <td>07-06-2022</td>
+        <td>D Venkatesh</td>
+        <td>200.00</td>
+      </tr>
+    <tr>
+	<td>101</td>
+        <td>22-04-2022</td>
+        <td>Svs Rajareddy</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>102</td>
+        <td>22-04-2022</td>
+        <td>D Venkatesh</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>103</td>
+        <td>22-04-2022</td>
+        <td>R Naveen</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>104</td>
+        <td>22-04-2022</td>
+        <td>B Manideep</td>
+        <td>150.00</td>
+      </tr>
+	<tr>
+	<td>105</td>
+        <td>22-04-2022</td>
+        <td>T Nookesh</td>
+        <td>150.00</td>
+      </tr>
+	 <tr>
+	<td>106</td>
+        <td>22-04-2022</td>
+        <td>K Anuswetha</td>
+        <td>250.00</td>
+      </tr>
+	<tr>
+	<td>107</td>
+        <td>22-04-2022</td>
+        <td>D Nagul Meeravali</td>
+        <td>150.00</td>
+      </tr>
+	<tr>
+	<td>108</td>
+        <td>22-04-2022</td>
+        <td>G Sairam</td>
+        <td>150.00</td>
+      </tr>
+	 <tr>
+	<td>109</td>
+        <td>22-04-2022</td>
+        <td>A venkatesh</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>110</td>
+        <td>02-05-2022</td>
+        <td>K Nandini</td>
+        <td>150.00</td>
+      </tr>
+      <tr>
+	<td>111</td>
+        <td>02-05-2022</td>
+        <td>K Mounika</td>
+        <td>500.00</td>
+      </tr>
+	 <tr>
+	<td>112</td>
+        <td>02-05-2022</td>
+        <td>P.Sravani</td>
+        <td>100.00</td>
+      </tr>
+	 <tr>
+	<td>113</td>
+        <td>02-05-2022</td>
+        <td>Revanthkumar</td>
+        <td>100.00</td>
+      </tr>
+	 <tr>
+	<td>114</td>
+        <td>02-05-2022</td>
+        <td>Sneha Radhika</td>
+        <td>251.00</td>
+      </tr>
+	<tr>
+	<td>115</td>
+        <td>03-05-2022</td>
+        <td>K Tilak </td>
+        <td>100.00</td>
+      </tr>
+	<tr>
+	<td>116</td>
+        <td>03-05-2022</td>
+        <td>G Sandhya</td>
+        <td>151.00</td>
+      </tr>
+	 <tr>
+	<td>117</td>
+        <td>03-05-2022</td>
+        <td>D Venkatesh</td>
+        <td>200.00</td>
+      </tr>
+      <tr>
+	<td>118</td>
+        <td>05-05-2022</td>
+        <td>M Nagarani</td>
+        <td>100.00</td>
+      </tr>
+      <tr>
+	<td>119</td>
+        <td>07-05-2022</td>
+        <td>G BhagyaLakshmi</td>
+        <td>100.00</td>
+      </tr>
+    </tbody>  
+    </table>
+    </div>
+<script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+<script type='text/javascript'>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+<script type='text/javascript'> 
+var myLink = document.querySelector('a[href="#"]');
+myLink.addEventListener('click', function(e) {
+e.preventDefault();
+});
+</script>
+</body>
+</html>
