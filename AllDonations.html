@@ -117,7 +117,7 @@ background: #555;
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-medium w3-right w3-padding-medium w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()">
-  <a href="https://weallcanhelp.blogspot.com/" class="w3-bar-item w3-button w3-padding-medium w3-theme-d4"><i class="w3-bar-item w3-button w3-padding-medium w3-theme-d4"></i>Home</a>
+  <a href="https://weallcanhelp.blogspot.com/" class="w3-bar-item w3-button w3-padding-medium w3-theme-d4"><i class=" w3-margin-right"></i> Home</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-medium w3-theme-d4">Donations</a>
 </div> </div></div></div></div></div>
 <!-- End of Navbar-->
@@ -133,8 +133,7 @@ background: #555;
  <img src="https://bit.ly/3x4h7Gr" width="280" height="70">
         <span class="w3-right w3-opacity">Updated Today</span>        
         <hr class="w3-clear">
-	 <h5>List of all donations received for June Cycle<text style="color:red">*</text></h5>
-	<h5 style="color:red">(From 10-06-2022 To 07-07-2022)</h5> 
+	 <center><h5 style="color:green">List Of All Donations Received</h5></center>
 <hr style="height:1px;border-width:0;background-color:blue">           
 	<marquee><text style="color:red">Please wait atleast 4 Hrs if your name is not updated in the list after donation.</text> </marquee>
     <hr style="height:1px;border-width:0;background-color:blue">      
@@ -364,9 +363,11 @@ background: #555;
 </div>    
 <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
 <script type='text/javascript'>
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
+$(document).ready(function () {
+    $('#example').DataTable({
+        order: [[0, 'desc']],
+    });
+});
 </script>
 <script type='text/javascript'> 
 var myLink = document.querySelector('a[href="#"]');
@@ -400,18 +401,13 @@ e.preventDefault();
       <a href="mailto:team.weallcanhelp@gmail.com" class="fa fa-google"></a>
     </div>
 <!--End of Social Media--> 
-
-
   </div>
   </footer>
-  
   <div class="w3-black w3-center w3-padding-12">Copyright &copy; 2022 | All rights reserved.</div>
-
 <!-- End page content -->
 </div>
 <script>
 includeHTML();
 </script>
-
 </body>
 </html>
