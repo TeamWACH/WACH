@@ -111,23 +111,22 @@ background: #888;
 background: #555; 
 } 
 .collected {
-  color: #80ffff;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-  font-size: 30;
+  color: blue;
+  font-family: 'Courier New', monospace;
+  font-size: 18;
   text-align:center;
-  background: radial-gradient(#f12711, #f5af19);
+  
 }
 
 .collected::before,
 .collected::after {
-  color: white;
-  content: "Rs. 7852/- ";
-  
-  animation: countdown 500s;
+  color: red;
+  content: "Rs.7852/-";
+  animation: countdown 900s;
 }
 
 .collected::after {
-  animation-duration: 3s;
+  animation-duration: 5s;
 }
 
 @keyframes countdown {
@@ -216,7 +215,7 @@ background: #555;
         <span class="w3-right w3-opacity">Updated Today</span>        
         <hr class="w3-clear">	 
 <center>
-<h5 style="color:green">List Of All Donations Received</h5>
+<h3 style="color:green;font-family:'Times New Roman', serif">Total list of donations received</h3>
 <text class="collected">Total Collected : </text>
 </center>
 <hr style="height:1px;border-width:0;background-color:blue">           
