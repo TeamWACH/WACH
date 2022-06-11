@@ -110,6 +110,88 @@ background: #888;
 ::-webkit-scrollbar-thumb:hover {
 background: #555; 
 } 
+.collected {
+  color: #80ffff;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  font-size: 30;
+  text-align:center;
+  background: radial-gradient(#f12711, #f5af19);
+}
+
+.collected::before,
+.collected::after {
+  color: white;
+  content: "Rs. 7852/- ";
+  
+  animation: countdown 500s;
+}
+
+.collected::after {
+  animation-duration: 3s;
+}
+
+@keyframes countdown {
+  0% {
+    content: "";
+  }
+  10% {
+    content: "";
+  }
+  15% {
+    content: "1500";
+  }
+  20% {
+    content: "2000";
+  }
+  25% {
+    content: "2500";
+  }
+  30% {
+    content: "3000";
+  }
+  35% {
+    content: "3500";
+  }
+  40% {
+    content: "4000";
+  }
+  45% {
+    content: "4500";
+  }
+  50% {
+    content: "5000";
+  }
+  55% {
+    content: "5500";
+  }
+  60% {
+    content: "6000";
+  }
+  65% {
+    content: "6500";
+  }
+  70% {
+    content: "7000";
+  }
+  75% {
+    content: "7500";
+  }
+  80% {
+    content: "7600";
+  }
+  85% {
+    content: "7650";
+  }
+  90% {
+    content: "7700";
+  }
+  95% {
+    content: "7800";
+  }
+  100% {
+    content: "7852";
+  }
+}
 </style>
 </head>
 <body className='snippet-body'>
@@ -132,8 +214,11 @@ background: #555;
 <div class="w3-container w3-card w3-white w3-round w3-margin">
  <img src="https://bit.ly/3x4h7Gr" width="280" height="70">
         <span class="w3-right w3-opacity">Updated Today</span>        
-        <hr class="w3-clear">
-	 <center><h5 style="color:green">List Of All Donations Received</h5></center>
+        <hr class="w3-clear">	 
+<center>
+<h5 style="color:green">List Of All Donations Received</h5>
+<text class="collected">Total Collected : </text>
+</center>
 <hr style="height:1px;border-width:0;background-color:blue">           
 	<marquee><text style="color:red">Please wait atleast 4 Hrs if your name is not updated in the list after donation.</text> </marquee>
     <hr style="height:1px;border-width:0;background-color:blue">      
