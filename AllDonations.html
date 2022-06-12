@@ -1,4 +1,3 @@
-
 <html>
 <script>
 function includeHTML() {
@@ -193,6 +192,34 @@ background: #555;
     content: "7852";
   }
 }
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 300% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  display: inline-block;
+      font-size: 12px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 </style>
 </head>
 <body className='snippet-body'>
@@ -213,15 +240,21 @@ background: #555;
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
   <div class="w3-col m7" style ="margin-top:-15px">
 <div class="w3-container w3-card w3-white w3-round w3-margin">
- <img src="https://bit.ly/3x4h7Gr" width="280" height="70">
+<img src="https://bit.ly/3x4h7Gr" width="280" height="70">
         <span class="w3-right w3-opacity">Updated Today</span>        
-        <hr class="w3-clear">	 
+<hr class="w3-clear">	 
 <center>
-<h3 style="color:green;font-family:'Times New Roman', serif">Total list of donations received</h3>
+<h4 style="color:green;font-family:'Times New Roman', serif">Total list of donations received</h4>
 <text class="collected">Total Collected : </text>
 </center>
 <hr style="height:1px;border-width:0;background-color:blue">           
-	<marquee><text style="color:red">Please wait atleast 4 Hrs if your name is not updated in the list after donation.</text> </marquee>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+        <text class="animate-charcter">Please wait atleast 4 Hours if your name is not reflected in the below list</text>
+    </div>
+  </div>
+</div>
     <hr style="height:1px;border-width:0;background-color:blue">      
 <table id="example" class="table table-striped table-bordered" style="width:100%">
      <thead>
