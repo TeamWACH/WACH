@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -23,6 +22,33 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         border-radius: 6px;
         outline: none;
       }
+      .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 300% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  display: inline-block;
+      font-size: 12px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -30,12 +56,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 </head>
 <div class="w3-card w3-round w3-white w3-center">
 <div class="w3-container">
-<h6 style="color:#ff0080"><strong>
-<i style='font-size:16px' class='fas'>&#xf109;</i>
-Switch to desktop site For better View.
-</strong></h6>
+<center><text class="animate-charcter"><img src="https://bit.ly/3OUGj9E" height=7% width=7%> Switch to desktop site For better View.</text></center>
 </div>
 </div>
+<br>
 <div class="w3-card w3-round w3-white w3-center">
 <div class="w3-container">
 <h5 style="color:#ff0080"><strong>Total Donated : 6816/- (Target : 10000)</strong></h5>
